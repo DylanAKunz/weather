@@ -1,5 +1,8 @@
-Current: <%= @current %><br/>
+<% cache(@key, expires_in: 30.minutes, skip_digest: true ) do%>
+  Current: <%= @current %><br/>
 Today's high:<%= @current_high %><br/>
 Today's low: <%= @current_low %><br/>
 Tomorrow's high: <%= @tomorrow_high %><br/>
 Tomorrow's low: <%= @tomorrow_low %><br/>
+<% end %>
+<%= @exist %>
