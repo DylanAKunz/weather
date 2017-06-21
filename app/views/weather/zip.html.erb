@@ -1,0 +1,11 @@
+<h1>Zip Code</h1>
+<%= form_for :zip, url: weather_view_path do |f| %>
+    <p>
+      <%= f.label :code %><br>
+      <%= f.number_field :code %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+
+<% end %>
